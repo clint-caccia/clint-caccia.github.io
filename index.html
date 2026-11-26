@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clint Caccia | Data and cybersecurity</title>
+<meta name="description" content="Clint Caccia, Computer Information Systems student at James Madison University. Data and cybersecurity projects, internship experience, and skills.">
+<meta property="og:title" content="Clint Caccia | Data and cybersecurity">
+<meta property="og:description" content="CIS student at James Madison University building tools for data and security work.">
+<meta property="og:url" content="https://clint-caccia.github.io/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23450084'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='900' font-size='16' fill='%23F3EBC7' text-anchor='middle'%3ECC%3C/text%3E%3C/svg%3E">
+<style>
+  :root {
+    --paper: #F6F5FA;
+    --ink: #1D1630;
+    --muted: #5E5873;
+    --purple: #450084;
+    --gold: #C2A95A;
+    --line: #DAD6E6;
+    --measure: 68ch;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Archivo", system-ui, sans-serif;
+    font-stretch: 100%;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+  }
+  a { color: var(--purple); text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
+  a:hover { text-decoration-thickness: 2px; }
+  a:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 2px; }
+  code { font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: 0.85em; }
+
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+
+  /* Hero: the one loud thing on the page */
+  header.hero { padding: 88px 0 56px; border-bottom: 1px solid var(--line); }
+  .name {
+    margin: 0;
+    font-size: clamp(3.4rem, 11vw, 8.6rem);
+    line-height: 0.86;
+    font-weight: 900;
+    font-stretch: 125%;
+    letter-spacing: -0.035em;
+    color: var(--purple);
+  }
+  .name span { display: block; }
+  .intro {
+    max-width: 40ch;
+    margin: 36px 0 0;
+    font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+    line-height: 1.4;
+    font-weight: 450;
+  }
+  .status {
+    display: flex; flex-wrap: wrap; gap: 10px 28px;
+    margin: 32px 0 0; padding: 0; list-style: none;
+    color: var(--muted); font-size: 0.98rem;
+  }
+  .status li { padding-left: 16px; position: relative; }
+  .status li::before {
+    content: ""; position: absolute; left: 0; top: 0.62em;
+    width: 7px; height: 7px; background: var(--gold); border-radius: 50%;
+  }
+  .links { display: flex; gap: 22px; margin: 34px 0 0; font-weight: 600; }
+
+  /* Sections: heading in a left rail, content on the right */
+  section { display: grid; grid-template-columns: 220px 1fr; gap: 32px; padding: 64px 0; border-bottom: 1px solid var(--line); }
+  section > h2 {
+    margin: 0; font-size: 1.05rem; font-weight: 800; color: var(--ink);
+    font-stretch: 112%;
+  }
+  .lede { margin: 0 0 30px; max-width: var(--measure); color: var(--muted); }
+
+  /* Projects as rows, not cards */
+  .group + .group { margin-top: 48px; }
+  .group h3 { margin: 0 0 8px; font-size: 1rem; font-weight: 700; color: var(--muted); font-stretch: 100%; }
+  .project { padding: 22px 0; border-top: 1px solid var(--line); max-width: 760px; }
+  .project h4 {
+    margin: 0; font-size: 1.45rem; line-height: 1.2; font-weight: 800;
+    font-stretch: 110%; letter-spacing: -0.01em;
+  }
+  .project h4 a { color: var(--ink); text-decoration: none; }
+  .project h4 a:hover { color: var(--purple); text-decoration: underline; }
+  .project p { margin: 8px 0 0; max-width: var(--measure); }
+  .tools { margin: 10px 0 0; color: var(--muted); font-size: 0.93rem; }
+
+  /* Experience is a real sequence, so it gets a timeline */
+  .jobs { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--line); }
+  .job { position: relative; padding: 0 0 36px 26px; max-width: 760px; }
+  .job:last-child { padding-bottom: 0; }
+  .job::before {
+    content: ""; position: absolute; left: -7px; top: 0.55em;
+    width: 12px; height: 12px; border-radius: 50%;
+    background: var(--paper); border: 2px solid var(--purple);
+  }
+  .job.current::before { background: var(--purple); }
+  .job h3 { margin: 0; font-size: 1.2rem; font-weight: 800; font-stretch: 108%; }
+  .when { margin: 2px 0 0; color: var(--muted); font-size: 0.95rem; }
+  .job ul { margin: 10px 0 0; padding-left: 1.1em; max-width: var(--measure); }
+  .job li + li { margin-top: 6px; }
+
+  .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 26px 40px; margin: 0; max-width: 820px; }
+  .skills dt { font-weight: 700; }
+  .skills dd { margin: 4px 0 0; color: var(--muted); }
+
+  .edu p { margin: 0 0 18px; max-width: var(--measure); }
+  .edu strong { font-weight: 700; }
+
+  footer { padding: 48px 0 72px; color: var(--muted); font-size: 0.95rem; }
+  footer .links { margin-top: 12px; }
+
+  @media (max-width: 760px) {
+    header.hero { padding: 56px 0 40px; }
+    section { grid-template-columns: 1fr; gap: 18px; padding: 44px 0; }
+    .project h4 { font-size: 1.25rem; }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .name span { animation: rise 0.7s cubic-bezier(.2,.7,.2,1) both; }
+    .name span + span { animation-delay: 0.08s; }
+    @keyframes rise { from { opacity: 0; transform: translateY(0.25em); } to { opacity: 1; transform: none; } }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <h1 class="name"><span>Clint</span><span>Caccia</span></h1>
+    <p class="intro">I study Computer Information Systems at James Madison University and build tools for data and security work.</p>
+    <ul class="status">
+      <li>BBA, Computer Information Systems, expected May 2028</li>
+      <li>Studying for CompTIA Security+</li>
+      <li>Looking for a Summer 2027 internship in Northern Virginia or DC</li>
+    </ul>
+    <nav class="links" aria-label="Profiles">
+      <a href="https://github.com/clint-caccia">GitHub</a>
+      <a href="https://www.linkedin.com/in/clint-caccia-b70428354">LinkedIn</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="projects" aria-labelledby="projects-h">
+      <h2 id="projects-h">Projects</h2>
+      <div>
+        <div class="group">
+          <h3>Security tools</h3>
+
+          <article class="project">
+            <h4><a href="https://github.com/clint-caccia/auth-log-analyzer">Auth Log Analyzer</a></h4>
+            <p>Reads a Linux <code>auth.log</code> and flags brute force, password spraying, a login that succeeds after a string of failures, direct root logins, and risky <code>sudo</code> commands. Each finding is mapped to MITRE ATT&amp;CK.</p>
+            <p class="tools">Python, regular expressions, pytest, GitHub Actions</p>
+          </article>
+
+          <article class="project">
+            <h4><a href="https://github.com/clint-caccia/phishing-email-analyzer">Phishing Email Analyzer</a></h4>
+            <p>Scores a reported email from 0 to 100. It checks SPF, DKIM and DMARC, spots lookalike domains like <code>micros0ft</code>, catches links whose text doesn't match where they go, flags risky attachments, and exports the indicators of compromise.</p>
+            <p class="tools">Python email parsing, pytest, GitHub Actions</p>
+          </article>
+
+          <article class="project">
+            <h4><a href="https://github.com/clint-caccia/nist-csf-risk-assessment">NIST CSF 2.0 Risk Assessment</a></h4>
+            <p>Scores an organization against the 22 categories of the NIST Cybersecurity Framework 2.0, builds a likelihood × impact risk register, and ranks which gaps to fix first. Includes a full sample assessment of a fictional dental practice.</p>
+            <p class="tools">Python, matplotlib, pytest</p>
+          </article>
+        </div>
+
+        <div class="group">
+          <h3>Data and analytics</h3>
+
+          <article class="project">
+            <h4><a href="https://github.com/clint-caccia/columbia-pike-business-database">Columbia Pike Business &amp; Property Database</a></h4>
+            <p>The database I built at my internship: 2,119 businesses and 13,062 property records from six separate sources, merged into one Airtable base the staff use every day.</p>
+            <p class="tools">Airtable, Arlington County open data</p>
+          </article>
+
+          <article class="project">
+            <h4><a href="https://github.com/clint-caccia/clearspend-va">ClearSpend VA</a></h4>
+            <p>Pulls public government spending data with Python, stores it in Azure SQL, and uses Azure OpenAI to help summarize the trends shown in Power BI dashboards.</p>
+            <p class="tools">Power BI, Azure SQL, Python, Azure OpenAI</p>
+          </article>
+
+          <article class="project">
+            <h4><a href="https://github.com/clint-caccia/intel-sustainability-dashboard">Intel Sustainability Dashboard</a></h4>
+            <p>Tableau dashboards that turn Intel's environmental performance data into a few clear trends for executives.</p>
+            <p class="tools">Tableau</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" aria-labelledby="experience-h">
+      <h2 id="experience-h">Experience</h2>
+      <ol class="jobs">
+        <li class="job current">
+          <h3>Business &amp; Property Database Intern, Columbia Pike Partnership</h3>
+          <p class="when">Arlington, VA. March 2026 to present</p>
+          <ul>
+            <li>Built a unified Airtable database of 2,119 businesses and 13,062 property records from six public and organizational data sources.</li>
+            <li>Used Arlington County property and revenue data to standardize fields and improve accuracy across 779 commercial and 145 multifamily properties.</li>
+            <li>Designed linked issue-tracking and contact tables so staff have one place to look for corridor-wide business outreach.</li>
+          </ul>
+        </li>
+        <li class="job current">
+          <h3>E-Commerce Seller, TikTok Shop</h3>
+          <p class="when">Independent, remote. January 2025 to present</p>
+          <ul>
+            <li>Research products in third-party analytics tools by commission rate, competition and weekly sales volume.</li>
+            <li>Make the short-form videos and handle listings, fulfillment and customer messages myself.</li>
+          </ul>
+        </li>
+        <li class="job">
+          <h3>Guest Services Greeter, Washington Commanders</h3>
+          <p class="when">Landover, MD. August 2024 to June 2025</p>
+          <ul>
+            <li>Checked tickets and directed guests at NFL home games and sorted out entry problems with big crowds waiting.</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <section id="skills" aria-labelledby="skills-h">
+      <h2 id="skills-h">Skills</h2>
+      <dl class="skills">
+        <div><dt>Data and programming</dt><dd>SQL, Python, Azure SQL, Airtable</dd></div>
+        <div><dt>Analytics and BI</dt><dd>Power BI, Tableau, Excel (PivotTables, VLOOKUP, Solver), Google Sheets</dd></div>
+        <div><dt>Security</dt><dd>Log analysis, phishing analysis, MITRE ATT&amp;CK, NIST CSF 2.0, risk assessment</dd></div>
+        <div><dt>Certifications</dt><dd>Microsoft Office Specialist: Excel, Tableau Desktop Specialist, CompTIA Security+ (in progress)</dd></div>
+        <div><dt>AI tools</dt><dd>Claude, Azure OpenAI</dd></div>
+        <div><dt>Languages</dt><dd>English (native), Spanish (conversational)</dd></div>
+      </dl>
+    </section>
+
+    <section id="education" aria-labelledby="education-h">
+      <h2 id="education-h">Education</h2>
+      <div class="edu">
+        <p><strong>James Madison University</strong>, Harrisonburg, VA<br>BBA, Computer Information Systems. GPA 3.5. Expected May 2028.<br>Member of the Association for Information Systems and the Madison Artificial Intelligence Club.</p>
+        <p><strong>George Mason University</strong>, Fairfax, VA<br>Management Information Systems coursework, 2024 to 2025. GPA 3.68, Dean's List.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Clint Caccia, Annandale, Virginia. The fastest way to reach me is LinkedIn.</p>
+    <nav class="links" aria-label="Profiles">
+      <a href="https://github.com/clint-caccia">GitHub</a>
+      <a href="https://www.linkedin.com/in/clint-caccia-b70428354">LinkedIn</a>
+    </nav>
+  </footer>
+
+</div>
+</body>
+</html>
